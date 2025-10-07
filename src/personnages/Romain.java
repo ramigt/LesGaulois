@@ -17,6 +17,14 @@ public class Romain {
 		return "Le romain" +nom+ " : " ;
 		
 	}
-	
+	public void recevoirCoup(int forceCoup ) {
+		force= force - forceCoup;
+		if (force >0) {
+			System.out.println("Le Romain" + nom + ": Aie ");
+		} else {
+			System.out.println("Le Romain" + nom + ": J'abandonne");
+			
+		}
+	}
 
 }
