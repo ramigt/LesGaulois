@@ -1,14 +1,18 @@
 package personnages;
 
 import personnages.Romain;
+
+import personnages.Village;
 import objets.Equipement;
 
 public class Gaulois {
 	private String nom;
 //	private int force;
 	private int effetPotion = 1;
-	private int force, nb_trophees;
+	private int force;
+	private int nb_trophees;
 	private Equipement trophees[] = new Equipement[100];
+	private Village village;
 
 	public Gaulois(String nom, int force, int effetPotion) {
 		this.nom = nom;
@@ -62,4 +66,25 @@ public class Gaulois {
 		effetPotion = forcePotion;
 	}
 
+	void setVillage(Village village) {
+		this.village = village;
+	}
+
+	public Village getVillage() {
+		return village;
+	}
+
+	public void sePresenter() {
+		System.out.print("Le Gaulois " + nom + " : ");
+
+		if (village == null) {
+			System.out.println("\"Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.\"");
+		} else if (village.getChef() == this) {
+			System.out.println(
+					"\"Bonjour, je m'appelle " + nom + ". Je suis le chef le village " + village.getNom() + ".\"");
+		} else {
+			System.out.println("\"Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".\"");
+		}
+
+	}
 }
