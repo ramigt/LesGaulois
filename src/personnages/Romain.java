@@ -131,6 +131,10 @@ public class Romain {
 			}
 		}
 		return equipementEjecte;
+	
+	}
+	private int getForce(){
+		return force;
 	}
 
 }

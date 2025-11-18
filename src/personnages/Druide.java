@@ -4,6 +4,15 @@ public class Druide {
 	private String nom;
 	private int forcePotion;
 	private Chaudron chaudron;
+	
+	
+	
+	public Druide( String nom,int forcePotion){
+		this.nom=nom;
+		this.forcePotion=forcePotion;
+	
+		
+	}
 
 public String getNom() {
 	return nom;
